@@ -76,7 +76,7 @@ body {
 .hero {
   height: calc(100svh - 4rem);
   background:
-    linear-gradient(to right, rgba(0, 0, 0, 0.7), transparent),
+    linear-gradient(to right, rgba(0, 0, 0, 0.8), transparent),
     url(/src/assets/hero.webp) no-repeat center center/cover;
   position: relative;
 }
@@ -95,6 +95,7 @@ body {
     font-size: 1.8rem;
     letter-spacing: 1px;
     width: 70%;
+    margin-bottom: 1rem;
   }
 }
 
@@ -107,4 +108,3 @@ body {
     font-style: italic;
   }
 }
-

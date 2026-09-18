@@ -69,7 +69,7 @@ h2 {
 }
 
 .section {
-  padding-block: 12rem;
+  padding-top: 12rem;
 }
 
 .wrapper {
@@ -144,9 +144,13 @@ h2 {
   margin-bottom: 1rem;
 }
 
+.text-center {
+  text-align: center;
+}
+
 @media (max-width: 37.5em) {
   .section {
-    padding-block: 4rem;
+    padding-top: 6rem;
   }
 }
 
@@ -238,5 +242,78 @@ h2 {
 
   .about__right {
     height: auto;
+  }
+}
+
+.features-wrapper {
+  background:
+    linear-gradient(
+      to right bottom,
+      rgba(18, 59, 53, 0.9),
+      rgba(63, 174, 120, 0.9)
+    ),
+    url(/src/assets/feature.webp) no-repeat center center/cover;
+  padding-block: 12rem;
+  margin-top: 3rem;
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(28rem, 1fr));
+  gap: 2rem;
+}
+
+.features__feature {
+  text-align: center;
+  background-color: var(--color-bg);
+  border-radius: 5px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.3);
+
+  svg {
+    align-self: center;
+    height: 5rem;
+    width: 5rem;
+    stroke: url(#brand-gradient);
+    margin-bottom: 2rem;
+  }
+
+  h3 {
+    font-size: clamp(1.8rem, 3vw, 2rem);
+    font-weight: 600;
+  }
+
+  span {
+    font-size: clamp(1.4rem, 2vw, 1.6rem);
+    font-weight: 600;
+    letter-spacing: 1px;
+    opacity: 0.75;
+  }
+
+  p {
+    font-size: clamp(1.6rem, 2vw, 1.8rem);
+    margin-top: auto;
+  }
+}
+
+@media (max-width: 75rem) {
+  .features__feature {
+    height: auto;
+  }
+
+  .features {
+    grid-template-columns: repeat(2, minmax(28rem, 1fr));
+  }
+}
+
+@media (max-width: 48rem) {
+  .features-wrapper {
+    padding-block: 1rem;
+  }
+  .features {
+    grid-template-columns: minmax(28rem, 1fr);
   }
 }
